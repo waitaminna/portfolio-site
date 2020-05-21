@@ -1,37 +1,157 @@
-.main-container {
-    width: 100%;
-    /* margin: 0 auto; */
-    display: grid;
-    grid-template: repeat(5, 2fr 1fr 1fr  1fr 0.5fr) / repeat(5, 1fr);
-    grid-gap: 5px;
+/* latin */
+@font-face {
+    font-family: 'Libre Franklin Bold';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Libre Franklin Medium'), local('LibreFranklin-Medium'), url(https://fonts.gstatic.com/s/librefranklin/v4/jizAREVItHgc8qDIbSTKq4XkRi3s-CI0q1vjitOh.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Libre Franklin Light'), local('LibreFranklin-Light'), url(https://fonts.gstatic.com/s/librefranklin/v4/jizAREVItHgc8qDIbSTKq4XkRi20-SI0q1vjitOh.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.grid-item {
-    background-color: #fff7e6;
+/* Set up the grid structure and background image! */
+
+.main-container {
+    width: 100%;
+    height: 1300px;
+    display: grid;
+    grid-template: repeat(6, 300px 50px 310px 310px 310px 50px) / repeat(5, 1fr);
+    background-image: linear-gradient(#A88BA4, #f5176f);
+    background-size: 100% 1280px;
+    background-repeat: no-repeat;
 }
+
+.img-description, button.enquire  {
+    display: none;
+}
+
+/* Styling the text with same properties */
+
+h1, h2, h3, h4, footer, nav {
+    font-family: 'Libre Franklin Bold', sans-serif;
+}
+
+p {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+/* Styling the header */
 
 .header {
     grid-area: 1 / 1 / span 1 / span 5;
-    display: flex;
+    position: relative;
+    background-color: #e8e8e8;
+}
+
+.title {
+    position: absolute;
+    width: 60%;
+    top: 10%;
+    left: 20px;
+    font-family: 'Libre Franklin Bold', sans-serif;
+    color: #A0819C;
 }
 
 .head-shot {
-    width: 30%;
+    position: absolute;
+    width: 50%;
+    right: 0px;
+    bottom: 0px;
+    min-width: 240px;
+    max-width: 295px;
 }
 
-.about {
+/* Create the mobile version of navigation menu */
+
+nav {
     grid-area: 2 / 1 / span 1 / span 5;
+    background-color: whitesmoke;
+    position: relative;
+    display: flex;
+    font-family: 'Libre Franklin Bold', sans-serif;
+    border-top: 1px solid #bbbdc7;
+    border-bottom: 1px solid #bbbdc7;
+    position: relative;
 }
 
-.projects {
+nav h3 {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    color: #A0819C;
+}
+
+.mobile-menu {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    padding-bottom: 2px;
+    font-size: 30px;
+    text-align: center;
+    width: 40px;
+    color: #A0819C;
+    border: 1px solid #A0819C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle {
+    display: none;
+}
+
+.navigation {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 49px;
+    background-color: whitesmoke;
+    border-bottom: 1px solid #bbbdc7;
+    word-spacing: 0px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #A0819C;
+    line-height: 50px;
+    cursor: pointer;
+    border-left: 1px solid #bbbdc7;
+    text-align: center;
+    padding: 16px;
+    float: right;
+}
+
+#toggle:checked + .navigation {
+    display: block;
+}
+
+
+/* extra that I am yet to deal with HNG! */
+
+#about, #projects, .enquire {
+    color: whitesmoke;
+    width: 90%;
+    margin: 0 auto;
+}
+#about {
     grid-area: 3 / 1 / span 1 / span 5;
 }
 
-.enquire {
+#projects {
     grid-area: 4 / 1 / span 1 / span 5;
 }
 
-footer {
+.enquire {
     grid-area: 5 / 1 / span 1 / span 5;
+}
+
+footer {
+    grid-area: 6 / 1 / span 1 / span 5;
+    color: #A0819C;
 }
 

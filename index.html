@@ -10,43 +10,47 @@
 <body>
     <div class='main-container'>
         <div class='header grid-item'>
-            <div class = 'img-container'>
-                <img src="images/head-shot.jpg" class="head-shot" alt="a photo of esteemed web developer, Minna Todd, 
-                and her black cat, Clover. Both are smiling into the camera">
-                <h3 class='img-description'>Minna Todd</h3>
-            </div>
+
+            <h1 class='title'>Creating fully responsive, <br>personalised sites</h1>
+            <button class='enquire'>Enquire Now</button>
+
+            <!-- <div class='img-container'> -->
+                <img src="images/placeholder-headshot-crop.png" class="head-shot" alt="a photo of esteemed web developer, Minna Todd, looking slyly into the camera.">
+                <h3 class="img-description">Minna Todd</h3>
             
-            <h1>Creating fully responsive, <br>personalised sites</h1>
-            <button>Enquire Now</button>
             <!-- TODO: Add in cute button/links to Github, Twitter, and LinkedIn -->
-            <nav>
-                <ul class='navigation'>
-                    <li><a>About</a></li>
-                    <li><a>Projects</a></li>
-                    <li><a>Contact Me</a></li>
-                    <!-- TODO: add links for all of these: two should be same page, one will take them to a form..
-                    maybe the form will be on this same page too? Not sure! Would be good to put in another page or use
-                    JavaScript to alter the page. I have an idea that this all looks like a folder and each one is a tab. 
-                    maybe a bit too cute? lol. Maybe an idea for another day -->
-                </ul>
-            </nav>
         </div>
 
-        <div class="about grid-item">
+        <nav class='grid-item'>
+            <h3>Minna Todd - Website Developer</h3>
+            <label for="toggle" class="mobile-menu">&#9776</label>
+            <input type="checkbox" id="toggle"/>
+            <div class="navigation">
+                <a href="#about">About</a>
+                <a href="#about">Projects</a>
+                <a>Contact Me</a>
+                <!-- TODO: add links for all of these: two should be same page, one will take them to a form..
+                maybe the form will be on this same page too? Not sure! Would be good to put in another page or use
+                JavaScript to alter the page. I have an idea that this all looks like a folder and each one is a tab. 
+                maybe a bit too cute? lol. Maybe an idea for another day -->
+            </div>
+        </nav>
+
+        <div class="grid-item" id="about">
             <h2>About Me</h2>
             <p>Hi! I'm Minna, a Melbourne-based developer looking for my next web project.
                 I love to create personalised websites with fully responsive functionality, 
                 whether it's for an individual or a company.
-
+                <br><br>
                 I have experience with HTML, CSS, Sass & SCSS, and vanilla JavaScript. I am 
                 proficient in working with both APIs and ServiceWorker for modern applications 
                 that fit the industry standard in 2020.
-                
+                <br><br>
                 Need a site? Send me an enquiry and I will be in contact with you shortly!
             </p>
         </div>
 
-        <div class="projects grid-item">
+        <div class="grid-item" id="projects">
             <h2>Past Projects</h2>
             <h4>My body of previous work</h4>
             <!-- you would clearly use a template here to put in all of your previous works. Right now you do not have
