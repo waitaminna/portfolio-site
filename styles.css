@@ -24,7 +24,7 @@
    /* grid-template: repeat(6, 300px 50px 310px 310px 310px 50px) / repeat(5, 1fr); */
     grid-template: repeat(6, 30vh 10vh 50vh 50vh 50vh 10vh) / repeat(5, 1fr);
     background-image: linear-gradient(#A88BA4, #f5176f);
-    background-size: 100% 200vh;
+   /* background-size: 100% 200vh; */
     background-repeat: no-repeat;
 }
 
@@ -33,6 +33,17 @@
 }
 
 /* Styling the text with same properties */
+
+.title {
+    font-size: 2em;
+}
+nav, footer {
+    font-size: 1em;
+}
+
+h2, h4, p {
+    1.5em;
+}   
 
 h1, h2, h3, h4, footer, nav {
     font-family: 'Libre Franklin Bold', sans-serif;
@@ -65,7 +76,7 @@ p {
     right: 0px;
     bottom: 0px;
     min-width: 240px;
-    max-width: 295px;
+   /* max-width: 295px; */
 }
 
 /* Create the mobile version of navigation menu */
