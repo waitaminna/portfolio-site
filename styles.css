@@ -35,14 +35,14 @@
 /* Styling the text with same properties */
 
 .title {
-    font-size: 2em;
+    font-size: 5em;
 }
 nav, footer {
-    font-size: 1em;
+    font-size: 2.5em;
 }
 
 h2, h4, p {
-    1.5em;
+    4em;
 }   
 
 h1, h2, h3, h4, footer, nav {
