@@ -42,7 +42,7 @@ nav, footer {
 }
 
 h2, h4, p {
-    4em;
+    font-size: 4em;
 }   
 
 h1, h2, h3, h4, footer, nav {
