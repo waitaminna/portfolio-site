@@ -22,9 +22,8 @@
     width: 100%;
     display: grid;
    /* grid-template: repeat(6, 300px 50px 310px 310px 310px 50px) / repeat(5, 1fr); */
-    grid-template: repeat(6, 30vh 10vh 50vh 50vh 50vh 10vh) / repeat(5, 1fr);
+    grid-template: 30vh 10vh 50vh 50vh 50vh 10vh / repeat(5, 1fr);
     background-image: linear-gradient(#A88BA4, #f5176f);
-    background-size: attr(height px);
     background-repeat: no-repeat;
 }
 
@@ -163,7 +162,6 @@ nav h3 {
 
 footer {
     grid-area: 6 / 1 / span 1 / span 5;
-    /* color: #A0819C; */
-    color: black;
+    color: #A0819C;
 }
 
