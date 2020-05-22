@@ -24,7 +24,7 @@
    /* grid-template: repeat(6, 300px 50px 310px 310px 310px 50px) / repeat(5, 1fr); */
     grid-template: repeat(6, 30vh 10vh 50vh 50vh 50vh 10vh) / repeat(5, 1fr);
     background-image: linear-gradient(#A88BA4, #f5176f);
-   /* background-size: 100% 200vh; */
+    background-size: attr(height);
     background-repeat: no-repeat;
 }
 
