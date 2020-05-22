@@ -163,5 +163,6 @@ nav h3 {
 footer {
     grid-area: 6 / 1 / span 1 / span 5;
     color: #A0819C;
+    background-color: whitesmoke;
 }
 
