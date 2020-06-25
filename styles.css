@@ -1,168 +1,275 @@
-/* latin */
 @font-face {
-    font-family: 'Libre Franklin Bold';
+    font-family: 'Nunito-bold';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-display: swap;
-    src: local('Libre Franklin Medium'), local('LibreFranklin-Medium'), url(https://fonts.gstatic.com/s/librefranklin/v4/jizAREVItHgc8qDIbSTKq4XkRi3s-CI0q1vjitOh.woff2) format('woff2');
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-    font-family: 'Libre Franklin';
+    font-family: 'Archivo Black';
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     font-display: swap;
-    src: local('Libre Franklin Light'), local('LibreFranklin-Light'), url(https://fonts.gstatic.com/s/librefranklin/v4/jizAREVItHgc8qDIbSTKq4XkRi20-SI0q1vjitOh.woff2) format('woff2');
+    src: local('Archivo Black Regular'), local('ArchivoBlack-Regular'), url(https://fonts.gstatic.com/s/archivoblack/v9/HTxqL289NzCGg4MzN6KJ7eW6CYyF_jzx13E.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v7/L0x5DF4xlVMF-BfR8bXMIjhLq3-cXbKD.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'VT323';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('VT323 Regular'), local('VT323-Regular'), url(https://fonts.gstatic.com/s/vt323/v11/pxiKyp0ihIEF2isfFJXUdVNF.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* Set up the grid structure and background image! */
-
-.main-container {
-    width: 100%;
-    display: grid;
-   /* grid-template: repeat(6, 300px 50px 310px 310px 310px 50px) / repeat(5, 1fr); */
-    grid-template: 30vh 10vh 50vh 50vh 50vh 10vh / repeat(5, 1fr);
-    background-image: linear-gradient(#A88BA4, #f5176f);
-    background-repeat: no-repeat;
+/* Basic Styling*/
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.img-description, button.enquire  {
-    display: none;
+body {
+    height: 100vh;
+    background-image: linear-gradient(#D3CFCE, #C26D8A);
+    overflow-x: hidden;
 }
 
-/* Styling the text with same properties */
-
-.title {
-    font-size: 5em;
-}
-nav, footer {
-    font-size: 2.5em;
-}
-
-h2, h4, p {
-    font-size: 4em;
-}   
-
-h1, h2, h3, h4, footer, nav {
-    font-family: 'Libre Franklin Bold', sans-serif;
-}
-
-p {
-    font-family: 'Libre Franklin', sans-serif;
-}
-
-/* Styling the header */
+/* Stlying of the header */
 
 .header {
-    grid-area: 1 / 1 / span 1 / span 5;
-    position: relative;
-    background-color: #e8e8e8;
+    display: inline-block;
 }
 
-.title {
-    position: absolute;
-    width: 60%;
-    top: 10%;
-    left: 20px;
-    font-family: 'Libre Franklin Bold', sans-serif;
-    color: #A0819C;
+.banner {
+    width: 100vw;
+    height: 5vh;
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 1.2em;
 }
 
-.head-shot {
-    position: absolute;
-    width: 50%;
-    right: 0px;
-    bottom: 0px;
-    min-width: 240px;
-   /* max-width: 295px; */
+.banner h3 {
+    font-family: 'Roboto Mono';
+    color: #53556A;
 }
 
-/* Create the mobile version of navigation menu */
+.dp-container {
+    margin-top: 24vh;
+}
+
+#dp {
+    width: 25vw;
+    float:left;
+    border-radius: 50%;
+    -webkit-shape-outside:circle();
+    shape-outside:circle();
+    margin: 6vw;
+    box-shadow: 0 0 4px #696565;
+}
+
+.intro {
+    color: #53556A;
+    font-family: 'Nunito-bold';
+    font-size: 1em;
+    margin: 6vw;
+}
+
+/* Ok, now to style these silly buttons */
 
 nav {
-    grid-area: 2 / 1 / span 1 / span 5;
-    background-color: whitesmoke;
     position: relative;
-    display: flex;
-    font-family: 'Libre Franklin Bold', sans-serif;
-    border-top: 1px solid #bbbdc7;
-    border-bottom: 1px solid #bbbdc7;
-    position: relative;
+    /* z-index: -1; */
 }
 
-nav h3 {
-    margin-left: 10px;
-    margin-bottom: 5px;
-    color: #A0819C;
-}
-
-.mobile-menu {
+.button {
+    border-radius: 50%;
+    border-style: none;
+    box-shadow: 0 0 4px #5a5656;
     position: absolute;
-    right: 5px;
-    top: 2px;
-    padding-bottom: 2px;
-    font-size: 30px;
+    color: rgb(219, 181, 196);
+    font-family: 'Roboto Mono';
+    font-size: 1.2em;
+    background-color: rgba(60, 100, 133, 0.767);
     text-align: center;
-    width: 40px;
-    color: #A0819C;
-    border: 1px solid #A0819C;
-    border-radius: 5px;
-    cursor: pointer;
+    display: inline-block;
 }
 
-#toggle {
-    display: none;
+.button p {
+    vertical-align: middle;
 }
 
-.navigation {
-    display: none;
+nav .about {
+    top: 10vh;
+    right: 18vw;
+    width: 27vw;
+    height: 27vw;
+    line-height: 27vw;
+}
+
+nav .projects {
+    top: 16vh;
+    left: 13vw;
+    width: 30vw;
+    height: 30vw;
+}
+
+nav .projects p {
+    margin-top: 7vw;
+}
+
+nav .enquire {
+    top: 30vh;
+    left: 38vw;
+    width: 35vw;
+    height: 35vw;
+    line-height: 35vw;
+}
+
+/*  Just lumping all animations in here */
+
+.banner {
+    animation-name: banner;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -15vh;
+}
+
+@keyframes banner {
+    from { top: -15vh;}
+    to { top: 0;}
+}
+
+.dp-container {
+    animation-name: dp;
+    animation-duration: 1.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dp {
+    from {opacity: 0;}
+    to {opacity: 100%;}
+}
+
+nav .about {
+    animation-name: about;
+    animation-duration: 1.5s;
+    top: 60vh;
+    animation-fill-mode: forwards;
+}
+
+nav .projects {
+    animation-name: projects;
+    animation-duration: 1.25s;
+    animation-delay: 0.25s;
+    top: 60vh;
+    animation-fill-mode: forwards;
+}
+
+nav .enquire {
+    animation-name: enquire;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    top: 60vh;
+    animation-fill-mode: forwards;
+}
+
+@keyframes about {
+    from { top: 60vh;}
+    to { top: 10vh;}
+}
+@keyframes enquire {
+    from { top: 54vh;}
+    to { top: 30vh;}
+}
+@keyframes projects {
+    from { top: 40vh;}
+    to { top: 16vh;}
+}
+
+/* Time to style this about page */
+
+#about-page, #projects-page, #enquire-page {
+    width: 75%;
+    height: 90%;
+    border-radius: 2% 2% 2% 2%;
+    position: absolute;
+    z-index: 1;
+    left: 100vw;
+    transition: left 0.5s;
+    padding: 4.5% 12.5%;
+    color: #C26D8A;
+    background-color: rgb(245, 245, 245);
+    font-family: 'Nunito-Bold';
+    overflow-y: auto;
+}
+
+.container {
+    vertical-align: middle;
+    height: 50vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+
+#about-page.active, #projects-page.active, #enquire-page.active {
+    left: 0vw;
+}
+
+.back {
+    text-align: right;
+}
+
+/* Now I shall style our  projects page */
+#projects-page img {
     width: 100%;
-    position: absolute;
-    top: 49px;
-    background-color: whitesmoke;
-    border-bottom: 1px solid #bbbdc7;
-    word-spacing: 0px;
 }
 
-.navigation a {
-    text-decoration: none;
-    color: #A0819C;
-    line-height: 50px;
-    cursor: pointer;
-    border-left: 1px solid #bbbdc7;
-    text-align: center;
-    padding: 16px;
-    float: right;
+/* Time to style the form */
+
+button {
+    margin-top: 2%;
+    padding: 5%;
+    border: 1px solid #C26D8A;
+    border-radius: 4px;
+    color: #C26D8A;
+    background-color: white;
+    box-shadow: 0 0 2px #5a5656;
 }
 
-#toggle:checked + .navigation {
-    display: block;
+li {
+    margin-top: 2%;
+    list-style-type: none;
 }
 
-
-/* extra that I am yet to deal with HNG! */
-
-#about, #projects, .enquire {
-    color: whitesmoke;
-    width: 90%;
-    margin: 0 auto;
-}
-#about {
-    grid-area: 3 / 1 / span 1 / span 5;
+#name, #email {
+    width: 70%;
 }
 
-#projects {
-    grid-area: 4 / 1 / span 1 / span 5;
+label {
+    width: 25%;
+    margin-right: 2%;
 }
 
-.enquire {
-    grid-area: 5 / 1 / span 1 / span 5;
+textarea {
+    width: 100%;
+    height: 25vh;
 }
 
-footer {
-    grid-area: 6 / 1 / span 1 / span 5;
-    color: #A0819C;
-    background-color: whitesmoke;
+textarea, input {
+    border: 1px solid #C26D8A;
+    border-radius: 4px;
+    color: #C26D8A;
+    padding: 1%;
 }
-
